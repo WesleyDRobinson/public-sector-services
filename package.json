@@ -1,0 +1,34 @@
+{
+  "name": "app-scaffolding",
+  "version": "0.1.0",
+  "description": "create apps with web components",
+  "dependencies": {
+    "express": "^4.16.3",
+    "webpack": "^4.5.0"
+  },
+  "devDependencies": {
+    "npm-run-all": "4.1.2",
+    "webpack-cli": "^2.0.14"
+  },
+  "scripts": {
+    "build": "webpack-cli src/app.js -p public/js/app.js",
+    "build:watch": "webpack-cli -w -d src/app.js public/js/app.js",
+    "deploy": "now --public",
+    "deploy:static": "npm run build && now --static ./public -n app-scaffolding --public",
+    "dev": "npm-run-all -p build:watch start",
+    "release": "yarn version && now alias",
+    "start": "node server.js"
+  },
+  "now": {
+    "public": true,
+    "alias": [
+      "app-scaffolding"
+    ]
+  },
+  "author": "wesley",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:WesleyDRobinson/app-scaffolding.git"
+  }
+}
