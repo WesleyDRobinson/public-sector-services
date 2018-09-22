@@ -13,8 +13,5 @@
   "alias": [
     "pss.now.sh",
     "www.publicsectorservices.com"
-  ],
-  "env": {
-    "VARIABLE_NAME": "env_value"
-  }
+  ]
 }
