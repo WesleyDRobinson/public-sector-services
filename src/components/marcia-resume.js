@@ -8,15 +8,15 @@ class MarciaResume extends HyperHTMLElement {
   created() {
     this.entry = this.entry || 'fadeIn'
     this.exit = this.exit || 'fadeOut'
-    this.className = 'w-100 bg-moon-gray near-black avenir lh-copy animated ' + this.entry
+    this.className = 'w-100 bg-near-white near-black avenir lh-copy animated ' + this.entry
 
     this.render()
   }
 
   render() {
     return this.html`
-<style
-     type="text/css">@import url('https://themes.googleusercontent.com/fonts/css?kit=fpjTOVmNbO4Lz34iLyptLUXza5VhXqVC6o75Eld_V98');
+<style type="text/css">
+@import url('https://themes.googleusercontent.com/fonts/css?kit=fpjTOVmNbO4Lz34iLyptLUXza5VhXqVC6o75Eld_V98');
 
 ul.lst-kix_list_1-0 {
   list-style-type: none
@@ -767,7 +767,7 @@ h6 {
 }
 </style>
 
-<div class="mt5 pa3">
+<div class="mt4 pa3 bg-moon-gray">
   <div class="mw7 lh-copy pv4 ph5 bw3 b--silver bg-near-white">
     <p class="c27"><span class="c1 c16">Marcia Raines </span></p>
     <p class="c9"><span class="c13">mraines.pss@gmail.com </span><span class="c28">&bull;</span><span

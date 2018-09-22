@@ -8,7 +8,7 @@ class MarciaBio extends HyperHTMLElement {
   created() {
     this.entry = this.entry || 'fadeIn'
     this.exit = this.exit || 'fadeOut'
-    this.className = 'db w-100 pa3 bg-moon-gray near-black avenir lh-copy animated ' + this.entry
+    this.className = 'db w-100 pa3 bg-near-white near-black avenir lh-copy animated ' + this.entry
 
     this.render()
   }
