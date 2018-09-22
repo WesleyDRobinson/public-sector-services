@@ -1,41 +1,79 @@
-import CustomLoader from './components/custom-loader'
-import CustomSplash from './components/custom-splash'
+import page from 'page'
+import HyperHTMLElement from 'hyperhtml-element'
 
-const {bind} = HyperHTMLElement
-const appShell = document.getElementById('app-shell')
-const toaster = document.querySelector('custom-toaster')
+const { bind, wire } = HyperHTMLElement
 
-page('*', middleWare)
-page('/page/:color', loadPage1)
-page('/', main)
+import CustomHome from './components/custom-home'
+import OurServices from './components/our-services'
+import AboutUs from './components/about-us'
+import ContactInformation from './components/contact-information'
+import BioResume from './components/bio-resume'
+
+page('*', analytics)
+page('/', home)
+page('/about', about)
+page('/services', services)
+page('/contact', contact)
+page('/bio', bio)
+page('/resume', '/bio#marcia-raines-resume')
 page()
 
-function middleWare(ctx, next) {
-    if (ctx.init) {
-        // show loader
-        return next()
-    } else {
-        bind(appShell)`<custom-loader></custom-loader>`
-        setTimeout(next, 1000)
-    }
+const exitAnimation = 'fadeOut'
+
+function analytics(ctx, next) {
+  if (ctx.init) {
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = window.gtag || gtag
+    window.gtag('js', new Date());
+    window.gtag('config', 'UA-68515019-6');
+    next()
+  } else {
+    next()
+  }
+
+  function gtag() {
+    return window.dataLayer.push(arguments)
+  }
 }
 
-function loadPage1(ctx) {
-    ctx.state.color = ctx.params.color || 'gray'
-
-    // use web components or simply construct html right here
-    const div = document.createElement('div')
-    div.className = `vh-100 pa4 near-white bg-${ctx.state.color}`
-
-    bind(div)`<h1 class="lh-title">${ctx.state.color} Page</h1>
-                <p class="ml3 pa3 lh-copy measure-wide near-white bg-black-30">Write HTML and get JS variable insertion \`\${ variableAccess }\` for free!</p>
-                <span class="dib pointer ml3 mt3 pv2 ph3 br2 br-pill bg-animate bg-light-yellow ba b--light-blue hover-bg-yellow f4 tracked ttu blue" onclick=page('/')>go home</span>`
-
-    appShell.innerHTML = ''
-    appShell.appendChild(div)
+function home() {
+  window.gtag('event', 'Home Viewed')
+  page('/about')
 }
 
-function main() {
-    // bind custom-splash element to app-shell
-    bind(appShell)`<custom-splash></custom-splash>`
+function about() {
+  window.gtag('event', 'About Us Viewed')
+  const mainArea = document.querySelector('#main-area')
+  const fEC = mainArea.firstElementChild
+  if (fEC) fEC.classList.add(exitAnimation)
+  const aboutUs = wire()`<about-us></about-us>`
+  setTimeout(() => bind(mainArea)`${aboutUs}`, 1000)
+}
+
+function contact() {
+  window.gtag('event', 'Contact Information Viewed')
+  const mainArea = document.querySelector('#main-area')
+  const fEC = mainArea.firstElementChild
+  if (fEC) fEC.classList.add(exitAnimation)
+
+  const contact = wire()`<contact-information></contact-information>`
+  setTimeout(() => bind(mainArea)`${contact}`, 1000)
+}
+
+function services() {
+  window.gtag('event', 'Our Services Viewed')
+  const mainArea = document.querySelector('#main-area')
+  const fEC = mainArea.firstElementChild
+  if (fEC) fEC.classList.add(exitAnimation)
+  const ourServices = wire()`<our-services></our-services>`
+  setTimeout(() => bind(mainArea)`${ourServices}`, 1000)
+}
+
+function bio() {
+  window.gtag('event', 'Bio | Resume Viewed')
+  const mainArea = document.querySelector('#main-area')
+  const fEC = mainArea.firstElementChild
+  if (fEC) fEC.classList.add(exitAnimation)
+  const bioResume = wire()`<bio-resume></bio-resume>`
+  setTimeout(() => bind(mainArea)`${bioResume}`, 1000)
 }

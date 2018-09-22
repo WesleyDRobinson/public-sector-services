@@ -1,0 +1,20 @@
+{
+  "name": "public-sector-services",
+  "type": "static",
+  "static": {
+    "public": "public",
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  },
+  "alias": [
+    "pss.now.sh",
+    "www.publicsectorservices.com"
+  ],
+  "env": {
+    "VARIABLE_NAME": "env_value"
+  }
+}
