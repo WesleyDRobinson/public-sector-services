@@ -19,7 +19,7 @@ class CustomHome extends HyperHTMLElement {
     return this.html`
       <div>
         <h1 class="f2 ml2 ml3-ns avenir">Public Sector Services</h1>
-        <nav class="w-100 ph2 ph3-ns flex flex-wrap tc ttu f4 tracked athelas pointer" onclick="${this}">
+        <nav class="ph2 ph3-ns flex flex-wrap tc ttu f4 tracked athelas" onclick="${this}">
           <div style="width:190px;" class=${navClass} data-href="/about">about</div>
           <div style="width:190px;" class=${navClass} data-href="/services">services</div>
           <div style="width:190px;" class=${navClass} data-href="/contact">contact</div>
@@ -30,6 +30,7 @@ class CustomHome extends HyperHTMLElement {
   }
 
   onclick(e) {
+    if (e.target.nodeName !== 'DIV') return e
     // component styles
     const navLink = e.target
     const siblings = Array.from(navLink.parentElement.children)
