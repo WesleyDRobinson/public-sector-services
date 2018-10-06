@@ -14,7 +14,7 @@ class AboutUs extends HyperHTMLElement {
 
   render() {
     return this.html`
-<h1 id="our-services" class="mt0 mb2 lh-title ttu">
+<h1 id="our-services" class="fw5 mt0 mb2 lh-title ttu">
 ABOUT US
 </h1>
 <article class="mw7 ph3 ph4-ns lh-copy">

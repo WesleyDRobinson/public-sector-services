@@ -16,17 +16,18 @@ class OurServices extends HyperHTMLElement {
   }
 
   render() {
+    const anchorClass = 'link pa2 light-green hover-mid-gray bg-animate bg-mid-gray hover-bg-gold'
     return this.html`
 <div class="pa3">
-<h1 id="our-services" class="mt0 mb2 lh-title">
+<h1 id="our-services" class="mt0 mb3 mb2 lh-title fw5">
 OUR SERVICES
 </h1>
 
-<nav class="flex f5 flex-wrap">
-    <a class="link pa2 light-green hover-dark-green bg-animate bg-dark-green hover-bg-light-green" href="#homeland-security">Homeland Security</a>
-    <a class="link pa2 light-green hover-dark-green bg-animate bg-dark-green hover-bg-light-green" href="#public-safety-consolidations-efficiencies">Public Safety Consolidations &amp; Efficiencies</a>
-    <a class="link pa2 light-green hover-dark-green bg-animate bg-dark-green hover-bg-light-green" href="#executive-team-support">Executive Team Support</a>
-    <a class="link pa2 light-green hover-dark-green bg-animate bg-dark-green hover-bg-light-green" href="#controversial-development-project-strategies">Controversial Development Project Strategies</a>
+<nav id="article-nav" class="flex f5 flex-wrap">
+    <a class=${anchorClass + ' br2 br--left'} href="#homeland-security">Homeland Security</a>
+    <a class=${anchorClass} href="#public-safety-consolidations-efficiencies">Public Safety Consolidations &amp; Efficiencies</a>
+    <a class=${anchorClass} href="#executive-team-support">Executive Team Support</a>
+    <a class=${anchorClass + ' br2 br--right'} href="#controversial-development-project-strategies">Controversial Development Project Strategies</a>
 </nav>
 
 <article class="mt3 cf w-100 ph2 ph3-ns lh-copy">
@@ -201,11 +202,6 @@ OUR SERVICES
   </div>
 </article>
 `
-  }
-
-  onclick() {
-    const toaster = document.querySelector('custom-toaster')
-    toaster.popToast('Congratulations! it toasted')
   }
 }
 

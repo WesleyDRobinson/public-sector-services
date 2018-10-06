@@ -15,7 +15,7 @@ class MarciaBio extends HyperHTMLElement {
 
   render() {
     return this.html`
-<h2 class="athelas lh-title">
+<h2 class="athelas lh-title fw5">
     Respected City Manager and tenured local government leader
 </h2>
 <p>
