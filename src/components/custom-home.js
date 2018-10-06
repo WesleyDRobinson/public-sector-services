@@ -15,15 +15,15 @@ class CustomHome extends HyperHTMLElement {
   }
 
   render() {
-    const navClass = "pv3 ph4 bg-animate bg-dark-green hover-bg-light-green light-green hover-orange"
+    const navClass = "pv3 ph4 bg-animate bg-mid-gray hover-bg-gold light-green hover-mid-gray"
     return this.html`
       <div>
-        <h1 class="f2 ml2 ml3-ns avenir">Public Sector Services</h1>
+        <h1 class="f1 fw4 ml2 ml3-ns avenir">Public Sector Services</h1>
         <nav class="ph2 ph3-ns flex flex-wrap tc ttu f4 tracked athelas" onclick="${this}">
-          <div style="width:190px;" class=${navClass} data-href="/about">about</div>
+          <div style="width:190px;" class=${navClass + ' br2 br--left'} data-href="/about">about</div>
           <div style="width:190px;" class=${navClass} data-href="/services">services</div>
           <div style="width:190px;" class=${navClass} data-href="/contact">contact</div>
-          <div style="width:190px;" class=${navClass} data-href="/bio">bio</div>
+          <div style="width:190px;" class=${navClass + ' br2 br--right'} data-href="/bio">bio</div>
         </nav>
       </div>
       <main id="main-area"/>`
@@ -35,11 +35,11 @@ class CustomHome extends HyperHTMLElement {
     const navLink = e.target
     const siblings = Array.from(navLink.parentElement.children)
     siblings.forEach(el => {
-      el.classList.remove('bg-orange', 'dark-green')
-      el.classList.add('bg-dark-green', 'light-green')
+      el.classList.remove('bg-gold', 'mid-gray')
+      el.classList.add('bg-mid-gray', 'light-green')
     })
-    navLink.classList.add('bg-orange', 'dark-green')
-    navLink.classList.remove('bg-dark-green', 'light-green')
+    navLink.classList.add('bg-gold', 'mid-gray')
+    navLink.classList.remove('bg-mid-gray', 'light-green')
 
     // navigation
     page(navLink.dataset.href)
