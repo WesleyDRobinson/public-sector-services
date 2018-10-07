@@ -1,6 +1,6 @@
 {
   "name": "public-sector-services",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "",
   "dependencies": {
     "document-register-element": "^1.11.0",
@@ -9,7 +9,6 @@
     "page": "^1.10.2",
     "serve": "^10.0.2"
   },
-  "main": "src/app.js",
   "devDependencies": {
     "now": "^11.4.6",
     "npm-run-all": "4.1.2",
