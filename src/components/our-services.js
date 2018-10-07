@@ -32,7 +32,7 @@ OUR SERVICES
 <article class="mt3 cf w-100 ph2 ph3-ns lh-copy">
   <div class="fl w-100 w-50-ns mr4 measure measure-wide-ns">
     <h2 id="overview" class="athelas lh-title mv0">
-    Overview <a class="pa2 f5" href="#our-services">TOP</a> 
+    Overview 
     </h2>
     
     <p>
@@ -134,7 +134,7 @@ OUR SERVICES
   <div class="fl w-100 w-50-ns measure measure-wide-ns">
     <h2 id="executive-team-support" class="athelas lh-title">
     Executive Team Support 
-    <a class="pa2 f5" href="#our-services">TOP</a>
+    <a class="dn-ns pa2 f5" href="#our-services">TOP</a>
     </h2>
 
     <p>
