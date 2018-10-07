@@ -29,11 +29,12 @@ ABOUT US
     and strategic approaches in difficult situations, paying attention to details in order to support
     accomplishing client goals. Areas of expertise include;
     </p>
-    <ul>
-      <li>homeland security issues,</li> 
-      <li>public safety consolidations,</li> 
-      <li>executive team support, and</li> 
-      <li>development support for controversial projects.</li> 
+    <img class="fl-l mr4-l mv3-l" width="320" height="446" src="mraines.png">
+    <ul class="list pl2 fw5">
+      <li>❏ executive team support</li> 
+      <li>❏ homeland security issues</li> 
+      <li>❏ public safety consolidations</li> 
+      <li>❏ development support for controversial projects</li> 
     </ul>
     <p>
     PSS works with agencies to select and mentor the best candidates for their executive team, find

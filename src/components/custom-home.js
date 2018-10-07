@@ -17,7 +17,10 @@ class CustomHome extends HyperHTMLElement {
   render() {
     const navClass = "pointer w-50 w-25-ns f5 f4-ns pv3 bg-animate bg-mid-gray hover-bg-gold light-green hover-mid-gray"
     return this.html`
+      <div class="flex justify-left items-center">
       <h1 class="f3 f2-m f1-l fw5 fw4-ns mt0 mb2 ml2 ml3-ns avenir">Public Sector Services</h1>
+      <img class="h4" src="pss_logo_hires.png" alt="goldenrod circular brush stroke"/>
+      </div>
       <nav class="ml3-ns mw8 br2 flex flex-wrap tc ttu f4 tracked athelas" onclick="${this}">
         <span class=${navClass} data-href="/about">about</span>
         <span class=${navClass} data-href="/services">services</span>
