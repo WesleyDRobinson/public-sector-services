@@ -21,14 +21,13 @@
     "deploy": "yarn build && now",
     "dev": "npm-run-all -p dev:build:watch dev:start",
     "dev:build:watch": "webpack -w --config ./config/webpack.dev.js",
-    "dev:start": "serve",
-    "release": "yarn version && now alias",
-    "start": "serve"
+    "dev:start": "serve --single",
+    "release": "yarn version && now alias"
   },
   "author": "wesley",
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/WesleyDRobinson/public-sector-services"
   }
 }
