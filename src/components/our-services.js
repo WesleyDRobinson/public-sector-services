@@ -16,18 +16,17 @@ class OurServices extends HyperHTMLElement {
   }
 
   render() {
-    const anchorClass = 'link pa2 light-green hover-mid-gray bg-animate bg-mid-gray hover-bg-gold'
+    const anchorClass = 'link pv2 ph3 br2 light-green bg-light-gray hover-mid-gray bg-animate hover-bg-gold'
     return this.html`
 <div class="pa3">
 <h1 id="our-services" class="mt0 mb3 mb2 lh-title fw5">
 OUR SERVICES
 </h1>
-
-<nav id="article-nav" class="flex f5 flex-wrap">
-    <a class=${anchorClass + ' br2 br--left'} href="#homeland-security">Homeland Security</a>
-    <a class=${anchorClass} href="#public-safety-consolidations-efficiencies">Public Safety Consolidations &amp; Efficiencies</a>
-    <a class=${anchorClass} href="#executive-team-support">Executive Team Support</a>
-    <a class=${anchorClass + ' br2 br--right'} href="#controversial-development-project-strategies">Controversial Development Project Strategies</a>
+<nav id="article-nav" class="pl2 pl3-ns flex f5 flex-wrap light-gray">
+    <a class=${anchorClass + ' br--left-ns'} href="#homeland-security">Homeland Security</a>
+    <a class=${anchorClass + ' br0-ns'} href="#executive-team-support">Executive Team Support</a>
+    <a class=${anchorClass + ' br0-ns'} href="#public-safety-consolidations-efficiencies">Public Safety Consolidations</a>
+    <a class=${anchorClass + ' br--right-ns'} href="#controversial-development-project-strategies">Controversial Development Strategy</a>
 </nav>
 
 <article class="mt3 cf w-100 ph2 ph3-ns lh-copy">

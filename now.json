@@ -1,6 +1,9 @@
 {
   "name": "public-sector-services",
   "type": "static",
+  "files": [
+    "public"
+  ],
   "static": {
     "public": "public",
     "rewrites": [

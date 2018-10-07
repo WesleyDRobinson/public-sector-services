@@ -9,28 +9,26 @@ class CustomHome extends HyperHTMLElement {
   created() {
     this.entry = 'fadeIn'
     this.exit = this.exit || 'fadeOut'
-    this.className = 'db animated ' + this.entry
+    this.className = 'db pa2 animated ' + this.entry
 
     this.render()
   }
 
   render() {
-    const navClass = "pv3 ph4 bg-animate bg-mid-gray hover-bg-gold light-green hover-mid-gray"
+    const navClass = "pointer w-50 w-25-ns f5 f4-ns pv3 bg-animate bg-mid-gray hover-bg-gold light-green hover-mid-gray"
     return this.html`
-      <div>
-        <h1 class="f1 fw4 ml2 ml3-ns avenir">Public Sector Services</h1>
-        <nav class="ph2 ph3-ns flex flex-wrap tc ttu f4 tracked athelas" onclick="${this}">
-          <div style="width:190px;" class=${navClass + ' br2 br--left'} data-href="/about">about</div>
-          <div style="width:190px;" class=${navClass} data-href="/services">services</div>
-          <div style="width:190px;" class=${navClass} data-href="/contact">contact</div>
-          <div style="width:190px;" class=${navClass + ' br2 br--right'} data-href="/bio">bio</div>
-        </nav>
-      </div>
+      <h1 class="f3 f2-m f1-l fw5 fw4-ns mt0 mb2 ml2 ml3-ns avenir">Public Sector Services</h1>
+      <nav class="ml3-ns mw8 br2 flex flex-wrap tc ttu f4 tracked athelas" onclick="${this}">
+        <span class=${navClass} data-href="/about">about</span>
+        <span class=${navClass} data-href="/services">services</span>
+        <span class=${navClass} data-href="/contact">contact</span>
+        <span class=${navClass} data-href="/bio">bio</span>
+      </nav>
       <main id="main-area"/>`
   }
 
   onclick(e) {
-    if (e.target.nodeName !== 'DIV') return e
+    if (e.target.nodeName !== 'SPAN') return e
     // component styles
     const navLink = e.target
     const siblings = Array.from(navLink.parentElement.children)
