@@ -30,7 +30,7 @@ function clearFirstElementChild(element) {
 
 function home(ctx, next) {
   window.gtag('event', 'Home Viewed')
-
+  page('/about')
   next()
 }
 
