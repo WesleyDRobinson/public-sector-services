@@ -14,28 +14,27 @@ class AboutUs extends HyperHTMLElement {
 
   render() {
     return this.html`
-<h1 id="our-services" class="fw5 mt0 mb2 lh-title ttu">
-ABOUT US
-</h1>
+<h1 id="our-services" class="fw5 mt0 mb2 lh-title ttc">about</h1>
 <article class="mw7 ph3 ph4-ns lh-copy">
     <p>
-    PUBLIC SECTOR SERVICES (PSS) is a small results-oriented firm with direct responsive
+    Public Sector Services (PSS) is a results-oriented firm with direct responsive
     service for public and private clients. Communication is streamlined and adaptable to client
-    needs. The firm’ knowledge of government operations and extensive network, provides clients
-    with a strong advantage in expanding market share using collaborative techniques. We know
-    how government works and what targets are needed to get projects prioritized. PSS focuses on
-    using leadership skills and experience to help clients navigate today’s complex governmental
-    atmosphere. The firm founded in early 2018, provides public and private clients with innovative
+    needs. The firm’s knowledge of government operations and extensive network, which provides clients
+    with a strong advantage in expanding market share using collaborative techniques.
+    We know how government works and what targets are needed to get projects prioritized.
+    </p> 
+    <p>PSS uses their leadership skills and experience to help clients navigate today’s complex government
+    atmosphere. Founded in early 2018, the firm provides public and private clients with innovative
     and strategic approaches in difficult situations, paying attention to details in order to support
-    accomplishing client goals. Areas of expertise include;
+    accomplishing client goals. Areas of expertise include:
+      <ul class="list pl2 fw5">
+        <li>❏ Executive team support</li> 
+        <li>❏ Homeland security issues</li> 
+        <li>❏ Public safety consolidations</li> 
+        <li>❏ Development support for controversial projects</li> 
+      </ul>
     </p>
     <img class="fl-l mr4-l mv3-l" width="320" height="446" src="mraines.png">
-    <ul class="list pl2 fw5">
-      <li>❏ executive team support</li> 
-      <li>❏ homeland security issues</li> 
-      <li>❏ public safety consolidations</li> 
-      <li>❏ development support for controversial projects</li> 
-    </ul>
     <p>
     PSS works with agencies to select and mentor the best candidates for their executive team, find
     efficiencies in operational areas and define solutions that will move the organization forward.

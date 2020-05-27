@@ -1,7 +1,5 @@
 import HyperHTMLElement from 'hyperhtml-element'
 
-const { bind, wire } = HyperHTMLElement
-
 class OurServices extends HyperHTMLElement {
   static get observedAttributes() {
     return ['timeout', 'entry', 'exit']
@@ -16,17 +14,25 @@ class OurServices extends HyperHTMLElement {
   }
 
   render() {
-    const anchorClass = 'link pv2 ph3 br2 light-green bg-light-gray hover-mid-gray bg-animate hover-bg-gold'
+    const bg = `bg-animate bg-white-90 hover-bg-gold`
+    const nav = `flex flex-wrap`
+
+    const anchorClass = `link pv2 ph3 br2 light-green hover-mid-gray ${bg}`
+    const left = `${anchorClass} br--left-ns`
+    const middle = `${anchorClass} br0-ns`
+    const right = `${anchorClass} br--right-ns`
+
+    const topLink = `pa2 f5 ttu link light-green`
+    const TOP_TEXT = `^ top`
+
     return this.html`
 <div class="pa3">
-<h1 id="our-services" class="mt0 mb3 mb2 lh-title fw5">
-OUR SERVICES
-</h1>
-<nav id="article-nav" class="pl2 pl3-ns flex f5 flex-wrap light-gray">
-    <a class=${anchorClass + ' br--left-ns'} href="#homeland-security">Homeland Security</a>
-    <a class=${anchorClass + ' br0-ns'} href="#executive-team-support">Executive Team Support</a>
-    <a class=${anchorClass + ' br0-ns'} href="#public-safety-consolidations-efficiencies">Public Safety Consolidations</a>
-    <a class=${anchorClass + ' br--right-ns'} href="#controversial-development-project-strategies">Controversial Development Strategy</a>
+<h1 id="our-services" class="mt0 mb3 mb2 lh-title fw5 ttc">services</h1>
+<nav id="article-nav" class=${nav}>
+    <a class=${left} href="#homeland-security">Homeland Security</a>
+    <a class=${middle} href="#executive-team-support">Executive Team Support</a>
+    <a class=${middle} href="#public-safety-consolidations-efficiencies">Public Safety Consolidations</a>
+    <a class=${right} href="#controversial-development-project-strategies">Controversial Development Strategy</a>
 </nav>
 
 <article class="mt3 cf w-100 ph2 ph3-ns lh-copy">
@@ -76,7 +82,7 @@ OUR SERVICES
     
     <h2 id="homeland-security" class="athelas lh-title">
     Homeland Security 
-    <a class="pa2 f5" href="#our-services">TOP</a>
+    <a class=${topLink} href="#our-services">${TOP_TEXT}</a>
     </h2>
     
     <p>
@@ -107,7 +113,7 @@ OUR SERVICES
     </p>
 
     <h2 id="public-safety-consolidations-efficiencies" class="athelas lh-title">
-    Public Safety Consolidations &amp; Efficiencies <a class="pa2 f5" href="#our-services">TOP</a>
+    Public Safety Consolidations &amp; Efficiencies <a class=${topLink} href="#our-services">${TOP_TEXT}</a>
     </h2>
 
     <p>
@@ -134,7 +140,7 @@ OUR SERVICES
   <div class="fl w-100 w-50-ns measure measure-wide-ns">
     <h2 id="executive-team-support" class="athelas lh-title">
     Executive Team Support 
-    <a class="dn-ns pa2 f5" href="#our-services">TOP</a>
+    <a class="dn-ns pa2 f5" href="#our-services">${TOP_TEXT}</a>
     </h2>
 
     <p>
@@ -158,7 +164,7 @@ OUR SERVICES
     
     <h2 id="controversial-development-project-strategies" class="athelas lh-title">
     Controversial Development Project Strategies 
-    <a class="pa2 f5" href="#our-services">TOP</a>
+    <a class=${topLink} href="#our-services">${TOP_TEXT}</a>
     </h2>
     
     <p>

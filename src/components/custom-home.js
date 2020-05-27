@@ -9,38 +9,63 @@ class CustomHome extends HyperHTMLElement {
   created() {
     this.entry = 'fadeIn'
     this.exit = this.exit || 'fadeOut'
-    this.className = 'db pa2 animated ' + this.entry
+    this.className = 'vh-100 flex flex-column justify-between animated ' + this.entry
 
     this.render()
   }
 
   render() {
-    const navClass = "pointer w-50 w-25-ns f5 f4-ns pv3 bg-animate bg-mid-gray hover-bg-gold light-green hover-mid-gray"
+    const header = `flex flex-wrap justify-between items-center bg-black-60`
+    const titleContainer = `flex items-center`
+    const image = `h3 h4-l`
+
+    const h1 = `w-100 f3 f1-l fw5 fw4-ns athelas light-gray`
+    const TITLE = `Public Sector Services`
+
+    const nav = `ml3 flex justify-around w-100-s`
+    const font = `f4-l tc ttc athelas light-green hover-black-60`
+    const bg = `bg-animate hover-bg-gold`
+    const padding = `pv2 pv3-m pv4-l ph3 ph5-l`
+    const navSpan = `pointer ${padding} ${bg} ${font}`
+
     return this.html`
-      <div class="flex justify-left items-center">
-      <h1 class="f3 f2-m f1-l fw5 fw4-ns mt0 mb2 ml2 ml3-ns avenir">Public Sector Services</h1>
-      <img class="h4" src="pss_logo_hires.png" alt="goldenrod circular brush stroke"/>
-      </div>
-      <nav class="ml3-ns mw8 br2 flex flex-wrap tc ttu f4 tracked athelas" onclick="${this}">
-        <span class=${navClass} data-href="/about">about</span>
-        <span class=${navClass} data-href="/services">services</span>
-        <span class=${navClass} data-href="/contact">contact</span>
-        <span class=${navClass} data-href="/bio">bio</span>
-      </nav>
-      <main id="main-area"/>`
+      <header class=${header}>
+        <div class=${titleContainer}>
+          <img class=${image} src="pss_logo_hires.png" alt="goldenrod circular brush stroke"/>
+          <a href="/" class="link">
+            <h1 class=${h1}>${TITLE}</h1>
+          </a>
+        </div>
+        
+        <nav class=${nav} onclick="${this}">
+          <span class=${navSpan} data-href="/about">about</span>
+          <span class=${navSpan} data-href="/services">services</span>
+          <span class=${navSpan} data-href="/contact">contact</span>
+          <span class=${navSpan} data-href="/bio">bio</span>
+        </nav>
+        <div class="dn db-ns"></div>
+      </header>
+      
+      <main id="main-area" class="pa2 overflow-auto"/>`
   }
 
   onclick(e) {
     if (e.target.nodeName !== 'SPAN') return e
+
     // component styles
+    const active = ['bg-gold']
+    const inactive = ['light-green']
+
     const navLink = e.target
-    const siblings = Array.from(navLink.parentElement.children)
-    siblings.forEach(el => {
-      el.classList.remove('bg-gold', 'mid-gray')
-      el.classList.add('bg-mid-gray', 'light-green')
-    })
-    navLink.classList.add('bg-gold', 'mid-gray')
-    navLink.classList.remove('bg-mid-gray', 'light-green')
+    const siblings = navLink.parentElement.children
+
+    for (let el of siblings) {
+      el.classList.remove(...active)
+      el.classList.add(...inactive)
+    }
+
+    navLink.classList.add(...active)
+    navLink.classList.remove(...inactive)
 
     // navigation
     page(navLink.dataset.href)
