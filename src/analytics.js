@@ -1,5 +1,3 @@
-'use strict'
-
 module.exports = function analytics(ctx, next) {
   if (ctx.init) {
     window.dataLayer = window.dataLayer || [];

@@ -17,4 +17,4 @@ import './routing.js'
 * Home Page Elements
 *
 * */
-import CustomHome from './components/custom-home'
+import './components/custom-home'
