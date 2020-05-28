@@ -23,7 +23,7 @@ class ContactInformation extends HyperHTMLElement {
 </h1>
 <article class="flex flex-column pl3 ph3 ph4-ns">
   <a class="f3 mb3 dark-green hover-orange" href="https://www.linkedin.com/in/marcia-raines-b25298a4/">LinkedIn</a>
-  <a class="f3 mb3 dark-green hover-orange" href="tel:+16509954743">650.995.4743</a>
+  <a class="f3 mb3 dark-green hover-orange" href="tel:+16509954743">(650) 995-4743</a>
   <a class="f3 mb3 dark-green hover-orange" href="mailto:mraines.pss@gmail.com">mraines.pss@gmail.com</a>
 </article>`
   }

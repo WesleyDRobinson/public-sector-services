@@ -9,7 +9,7 @@ class CustomHome extends HyperHTMLElement {
   created() {
     this.entry = 'fadeIn'
     this.exit = this.exit || 'fadeOut'
-    this.className = 'vh-100 flex flex-column justify-between animated ' + this.entry
+    this.className = 'vh-100 flex flex-column animated ' + this.entry
 
     this.render()
   }
